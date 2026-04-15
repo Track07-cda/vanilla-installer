@@ -4,6 +4,7 @@ application_id = 'org.vanillaos.Installer'
 scalable_dir = join_paths('hicolor', 'scalable', 'apps')
 symbolic_dir = join_paths('hicolor', 'symbolic')
 actions_dir = join_paths(symbolic_dir, 'actions')
+emblems_dir = join_paths(symbolic_dir, 'emblems')
 
 
 install_data(
@@ -37,4 +38,8 @@ install_data(
 install_data(
     join_paths(actions_dir, 'vanilla-logo-text-symbolic.svg'),
     install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', 'scalable', 'actions')
+)
+install_data(
+    join_paths(emblems_dir, 'emblem-default-symbolic.svg'),
+    install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', 'symbolic', 'emblems')
 )
